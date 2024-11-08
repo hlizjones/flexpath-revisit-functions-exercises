@@ -14,6 +14,6 @@ function declaredFunction() {
 }
 
 // Function expression
-var expressFunction = function () {
+const expressFunction = function () {
   return "I am a function expression.";
 };

@@ -1,5 +1,0 @@
-Explanation:
-
-In incrementTraditional, this refers to the calculator object because it's called as a method of the object.
-In incrementArrow, this is inherited from the enclosing scope, which is the global scope in this case. Since this.currentValue is undefined in the global scope, attempting to increment it results in NaN.
-Arrow functions do not have their own this binding; they capture this from the surrounding context.

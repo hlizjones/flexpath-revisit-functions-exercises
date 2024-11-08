@@ -1,4 +1,0 @@
-Exercise 2: Arrow Functions and 'this' Binding
-Problem:
-
-Create an object calculator with a property currentValue and two methods: one using a traditional function and another using an arrow function. Both methods increment currentValue by 1. Demonstrate how this behaves differently in both methods.

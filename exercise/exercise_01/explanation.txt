@@ -1,5 +1,0 @@
-Explanation:
-
-Function Declarations are hoisted entirely, meaning both the function name and its implementation are moved to the top of their scope during the compilation phase. Therefore, you can call declaredFunction() before its definition.
-
-Function Expressions are variables assigned to anonymous functions. Only the variable declaration is hoisted (set to undefined), not the assignment. Calling expressFunction() before its definition results in a TypeError because expressFunction is undefined at that point.
