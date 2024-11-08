@@ -21,7 +21,7 @@ least difficult to most difficult.
 To find these questions, just google 'LeetCode Problem [problem #]'.
 
 Once again, this list is OPTIONAL. You will NOT be graded on any of these
-and thankfully our apprenticeship interviews are NOT centered around answering
+and our apprenticeship interviews are NOT centered around answering
 these kinds of questions in a live setting.
 
 If you choose to work through this list, do a LITLE BIT each day (15-20 min) 
