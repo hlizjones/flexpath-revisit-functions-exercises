@@ -1,20 +1,15 @@
-// Global context (in non-strict mode)
-console.log(this === window); // Outputs: true (in browsers)
-
-// Inside an object method
-const obj = {
-  value: 42,
-  getValue: function () {
-    console.log(this === obj); // Outputs: true
-    return this.value;
+const person = {
+  name: "Alice",
+  regularFunction: function () {
+    return `My name is ${this.name}`;
+  },
+  arrowFunction: () => {
+    return `My name is ${this.name}`;
   },
 };
 
-console.log(obj.getValue()); // Outputs: 42
-
-// Inside a regular function
-function showThis() {
-  console.log(this === window); // Outputs: true (in non-strict mode)
-}
-
-showThis();
+// Testing
+// Outputs: 'My name is Alice'
+console.log(person.regularFunction());
+// Outputs: 'My name is undefined', throws error in strict mode
+console.log(person.arrowFunction());

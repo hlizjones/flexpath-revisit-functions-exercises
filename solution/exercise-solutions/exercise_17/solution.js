@@ -1,17 +1,15 @@
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
+function regularFunction() {
+  console.log("Regular Function Arguments:", arguments);
 }
 
-Person.prototype.introduce = function () {
-  return `Hello, I'm ${this.name} and I'm ${this.age} years old.`;
+const arrowFunction = () => {
+  try {
+    console.log("Arrow Function Arguments:", arguments);
+  } catch (e) {
+    console.error("Arrow Function Error:", e.message);
+  }
 };
 
 // Testing
-const person1 = new Person("Alice", 30);
-const person2 = new Person("Bob", 25);
-
-console.log(person1.introduce()); // Outputs: "Hello, I'm Alice and I'm 30 years old."
-console.log(person2.introduce()); // Outputs: "Hello, I'm Bob and I'm 25 years old."
-
-console.log(person1.introduce === person2.introduce); // Outputs: true
+regularFunction(1, 2, 3); // Outputs: [Arguments] { '0': 1, '1': 2, '2': 3 }
+arrowFunction(4, 5, 6); // Outputs error

@@ -1,15 +1,25 @@
-function greet(message) {
-  console.log(`${message}, ${this.name}!`);
-}
+const stringModule = (function () {
+  let str = "";
 
-const user = { name: "Bob" };
+  return {
+    setString: function (value) {
+      str = value;
+    },
+    toUpperCase: function () {
+      return str.toUpperCase();
+    },
+    toLowerCase: function () {
+      return str.toLowerCase();
+    },
+    capitalize: function () {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    },
+  };
+})();
 
-// Using call
-greet.call(user, "Hello"); // Outputs: 'Hello, Bob!'
+// Testing
+stringModule.setString("hello world");
+console.log(stringModule.toUpperCase()); // Outputs: 'HELLO WORLD'
+console.log(stringModule.capitalize()); // Outputs: 'Hello world'
 
-// Using apply
-greet.apply(user, ["Hi"]); // Outputs: 'Hi, Bob!'
-
-// Using bind
-const boundGreet = greet.bind(user);
-boundGreet("Welcome"); // Outputs: 'Welcome, Bob!'
+console.log(typeof str); // Outputs: 'undefined'

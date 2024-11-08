@@ -1,8 +1,9 @@
 
 Explanation:
 
-Methods added to Person.prototype are shared among all instances.
+In regular functions, `arguments` is an object containing all passed arguments.
 
-This is memory-efficient as the method is not duplicated for each instance.
+Arrow functions do not have their own `arguments` object; 
+attempting to access it results in a ReferenceError.
 
-The `introduce` method uses `this` to access instance properties.
+To handle rest parameters in arrow functions, use rest syntax (...args).

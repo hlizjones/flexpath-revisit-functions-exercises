@@ -1,12 +1,11 @@
 
-Exercise 16: IIFE and Module Pattern
+Exercise 16: Function Constructors and Prototypes
 
 Problem:
 
-Implement a simple module called `stringModule` using an IIFE. 
+Create a constructor function `Person` that accepts 'name' and 'age'. 
 
-The module should expose methods `toUpperCase`, 
-`toLowerCase`, and `capitalize`, 
-operating on a private 'string' variable. 
+Add a method `introduce` to its prototype that returns a string 
+introducing the person. 
 
-Demonstrate that the private 'string' cannot be accessed directly.
+Demonstrate how instances share methods through the prototype.

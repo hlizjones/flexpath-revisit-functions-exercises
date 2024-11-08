@@ -1,9 +1,11 @@
 
-Exercise 13: 'this' in Different Contexts
+Exercise 13: 'this' in Arrow Functions
 
 Problem:
 
-Demonstrate how the `this` keyword behaves differently in the 
-global context, within a method, and within a regular function. 
+Create an object with a method defined using an arrow function and 
+another method using a regular function. 
 
-Write code snippets that show the value of `this` in each case.
+Inside each method, attempt to access a property of the object using `this`. 
+
+Explain the results.

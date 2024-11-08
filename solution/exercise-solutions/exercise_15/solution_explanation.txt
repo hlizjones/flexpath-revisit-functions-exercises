@@ -1,12 +1,9 @@
 
 Explanation:
 
-`call` invokes the function immediately with `this` set to `user` and 
-arguments passed individually.
+The IIFE creates a private scope for the variable 'str'.
 
-`apply` is similar to `call` but arguments are passed as an array.
+Public methods operate on 'str' but do not expose it directly.
 
-`bind` returns a new function with `this` bound to `user`, 
-which can be called later.
-
-These methods are used to control the value of `this` in function invocations.
+This pattern is useful for encapsulating data and 
+exposing only necessary methods.
