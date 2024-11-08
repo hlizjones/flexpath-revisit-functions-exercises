@@ -1,0 +1,4 @@
+Exercise 13: 'this' in Different Contexts
+Problem:
+
+Demonstrate how this behaves differently in the global context, within a method, and within a regular function. Write code snippets that show the value of this in each case.

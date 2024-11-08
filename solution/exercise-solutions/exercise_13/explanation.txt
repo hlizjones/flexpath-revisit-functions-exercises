@@ -1,0 +1,5 @@
+Explanation:
+
+In the global context, this refers to the global object (window in browsers).
+Inside an object method, this refers to the object itself when the method is called as obj.getValue().
+In a regular function, this defaults to the global object in non-strict mode and undefined in strict mode.

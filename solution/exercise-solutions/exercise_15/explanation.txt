@@ -1,0 +1,6 @@
+Explanation:
+
+call invokes the function immediately with this set to user and arguments passed individually.
+apply is similar to call but arguments are passed as an array.
+bind returns a new function with this bound to user, which can be called later.
+These methods are used to control the value of this in function invocations.

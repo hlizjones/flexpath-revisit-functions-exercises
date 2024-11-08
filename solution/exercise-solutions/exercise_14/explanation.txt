@@ -1,0 +1,5 @@
+Explanation:
+
+In regularFunction, this refers to person because it's called as a method of person.
+In arrowFunction, this does not bind to person; it inherits this from the enclosing scope, which is the global scope where this.name is undefined.
+Arrow functions are not suitable as object methods when this binding is required.

@@ -1,0 +1,5 @@
+Explanation:
+
+The function recursively selects each element as the first element and generates permutations of the remaining elements.
+The base case occurs when the array is empty, returning an array containing an empty array.
+Recursion continues until all permutations are generated.

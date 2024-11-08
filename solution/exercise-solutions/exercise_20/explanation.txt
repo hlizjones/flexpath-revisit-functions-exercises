@@ -1,0 +1,5 @@
+Explanation:
+
+The composeFunctions function uses rest parameters to collect functions into an array.
+reduceRight applies the functions from right to left, passing the result of each function to the next.
+This pattern is useful for function composition and demonstrates advanced use of rest and spread operators.
