@@ -1,7 +1,37 @@
 
+### This list is NOT REQUIRED for the Flex Tech course.
+
+It is an optional list of problems for students that want to continue to get 
+comfortable using JavaScript as a language to solve problems.
+
+By completing the lesson modules before this one, you now have the baseline
+skills to start interacting with Data Structure & Algorithm questions.
+
+These questions are a great way to get more comfortable with a given programming
+language and start to learn common data structures that can be really beneficial 
+when implementing efficient solutions for hard problems in your work as a 
+Software Developer.
+
+LeetCode is the most popular site for working on these types of questions.
+
 Here is a list of 50 easy and medium difficulty LeetCode problems that cover 
-the JavaScript concepts you've provided, ordered from 
-least difficult to most difficult:
+the JavaScript concepts we've covered so far, ordered from 
+least difficult to most difficult.
+
+To find these questions, just google 'LeetCode Problem [problem #]'.
+
+Once again, this list is OPTIONAL. You will NOT be graded on any of these
+and thankfully our apprenticeship interviews are NOT centered around answering
+these kinds of questions in a live setting.
+
+If you choose to work through this list, do a LITLE BIT each day (15-20 min) 
+as you put your main focus into finishing the Flex Tech course.
+
+You can also ignore this list now and come back to it once you finish the 
+Flex Tech course. That is COMPLETELY ok! 
+
+We just wanted to provide you with a jumping off point for starting to 
+engage with DS & A questions.
 
 ---
 
