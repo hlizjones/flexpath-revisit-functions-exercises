@@ -1,3 +1,4 @@
+
 Explanation:
 
 Function Declarations are hoisted entirely, meaning both the function name 

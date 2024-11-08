@@ -1,3 +1,4 @@
+
 Exercise 10: Higher-Order Functions and Callbacks
 
 Problem:

@@ -1,3 +1,4 @@
+
 Explanation:
 
 Rest parameters ...nums collect all remaining arguments into an array.

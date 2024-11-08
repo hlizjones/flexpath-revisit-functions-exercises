@@ -1,3 +1,4 @@
+
 Exercise 8: Using the Arguments Object
 
 Problem:

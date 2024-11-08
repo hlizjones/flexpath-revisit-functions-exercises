@@ -1,3 +1,4 @@
+
 Explanation:
 
 In the global context, `this` refers to the global object (`window` object in browsers).

@@ -1,3 +1,4 @@
+
 Explanation:
 
 In regular functions, `arguments` is an object containing all passed arguments.

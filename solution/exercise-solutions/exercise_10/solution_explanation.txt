@@ -1,3 +1,4 @@
+
 Explanation:
 
 processArray is a higher-order function because it 

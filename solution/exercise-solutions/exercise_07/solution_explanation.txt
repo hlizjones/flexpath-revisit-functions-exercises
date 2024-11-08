@@ -1,3 +1,4 @@
+
 Explanation:
 
 Default parameters are used when an argument is undefined or missing.

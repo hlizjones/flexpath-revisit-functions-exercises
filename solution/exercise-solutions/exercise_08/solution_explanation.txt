@@ -1,3 +1,4 @@
+
 Explanation:
 
 The arguments object is an array-like object accessible inside 
