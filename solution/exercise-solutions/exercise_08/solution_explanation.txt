@@ -1,5 +1,8 @@
 Explanation:
 
-The arguments object is an array-like object accessible inside functions that contains the arguments passed to the function.
+The arguments object is an array-like object accessible inside 
+functions that contains the arguments passed to the function.
+
 It allows functions to handle more arguments than declared parameters.
+
 Note that in strict mode and arrow functions, arguments is not available.

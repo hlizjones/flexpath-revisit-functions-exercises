@@ -1,6 +1,0 @@
-Explanation:
-
-The recursive function recurse iterates over each element.
-If an element is an array, the function calls itself with that element.
-The base case occurs when the element is not an array; it is then added to the result.
-Without a base case, the recursion would continue indefinitely, leading to a stack overflow.

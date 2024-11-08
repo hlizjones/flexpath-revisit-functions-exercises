@@ -1,0 +1,9 @@
+Explanation:
+
+processArray is a higher-order function because it 
+takes a function as an argument.
+
+The callback is applied to each element, demonstrating how functions can be 
+passed and used dynamically.
+
+This pattern is common in JavaScript, such as with Array.prototype.map.

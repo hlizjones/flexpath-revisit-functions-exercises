@@ -1,5 +1,8 @@
 Explanation:
 
 Default parameters are used when an argument is undefined or missing.
+
 Passing null overrides the default parameter, setting role to null.
-This behavior allows for safer function calls by ensuring parameters have default values when not provided.
+
+This behavior allows for safer function calls by ensuring parameters 
+have default values when not provided.

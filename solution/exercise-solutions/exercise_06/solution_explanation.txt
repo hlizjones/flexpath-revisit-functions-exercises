@@ -1,0 +1,11 @@
+Explanation:
+
+Primitives like numbers are passed by value. 
+Modifications inside the function do not affect the original variable.
+
+Objects are passed by reference. 
+Changes to the object's properties inside the function 
+affect the original object.
+
+In the function, num is a copy of myNum, while obj 
+references the same object as myObj.

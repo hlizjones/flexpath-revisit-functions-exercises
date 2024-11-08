@@ -1,0 +1,8 @@
+Explanation:
+
+The inner function forms a closure over the 'count' variable.
+
+Each call to `createCounter` creates a new scope with its own 'count'.
+
+The counter variables are private and cannot be accessed directly 
+from the global scope.

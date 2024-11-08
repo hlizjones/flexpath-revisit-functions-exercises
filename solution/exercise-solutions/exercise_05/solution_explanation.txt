@@ -1,5 +1,8 @@
 Explanation:
 
 The IIFE creates a new scope, and count is private to that scope.
+
 The returned object exposes methods that can interact with count.
-Attempting to access count from the global scope results in undefined, demonstrating encapsulation.
+
+Attempting to access count from the global scope results in undefined, 
+demonstrating encapsulation.

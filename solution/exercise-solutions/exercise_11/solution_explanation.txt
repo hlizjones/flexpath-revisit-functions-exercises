@@ -1,0 +1,12 @@
+Explanation:
+
+In the incorrect version, the variable i is declared with var, 
+which is function-scoped. 
+
+By the time the callbacks execute, i has become 6.
+
+Wrapping setTimeout in an IIFE captures the current value of i as num, 
+creating a new scope.
+
+Alternatively, using let declares i with block scope, preserving its value 
+within each iteration.

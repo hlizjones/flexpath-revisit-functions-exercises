@@ -1,5 +1,7 @@
 Explanation:
 
 Rest parameters ...nums collect all remaining arguments into an array.
+
 This provides a cleaner and more readable way to handle indefinite arguments.
+
 Rest parameters are actual arrays, unlike the arguments object.
