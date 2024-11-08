@@ -277,5 +277,5 @@ They provide practical applications of:
     - Memory management considerations
 
 By working through these problems, you'll strengthen your understanding of 
-the JavaScript concepts you've listed and gain practical experience in 
+the JavaScript concepts listed above and gain practical experience in 
 applying them to solve algorithmic challenges.
