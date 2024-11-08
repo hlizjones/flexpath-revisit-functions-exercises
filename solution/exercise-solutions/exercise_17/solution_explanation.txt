@@ -1,5 +1,7 @@
 Explanation:
 
 Methods added to Person.prototype are shared among all instances.
+
 This is memory-efficient as the method is not duplicated for each instance.
-The introduce method uses this to access instance properties.
+
+The `introduce` method uses `this` to access instance properties.

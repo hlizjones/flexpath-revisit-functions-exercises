@@ -1,0 +1,8 @@
+Explanation:
+
+In regular functions, `arguments` is an object containing all passed arguments.
+
+Arrow functions do not have their own `arguments` object; 
+attempting to access it results in a ReferenceError.
+
+To handle rest parameters in arrow functions, use rest syntax (...args).

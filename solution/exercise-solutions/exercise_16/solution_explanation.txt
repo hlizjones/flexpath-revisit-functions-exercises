@@ -1,0 +1,9 @@
+
+Explanation:
+
+The IIFE creates a private scope for the variable 'str'.
+
+Public methods operate on 'str' but do not expose it directly.
+
+This pattern is useful for encapsulating data and 
+exposing only necessary methods.

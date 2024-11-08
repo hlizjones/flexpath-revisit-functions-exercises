@@ -1,4 +1,0 @@
-Exercise 20: Composing Functions with Rest and Spread Operators
-Problem:
-
-Write a function composeFunctions that accepts any number of single-argument functions and returns a new function that composes them from right to left. Use rest and spread operators to handle the functions.
