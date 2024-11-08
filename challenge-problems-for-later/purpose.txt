@@ -1,0 +1,5 @@
+To state that these ARE NOT REQUIRED for students.
+
+They're just a starting resource for them to get extra practice using the
+JavaScript language to solve problems and start to learn data structures
+that will be useful in their future work as full stack developers
