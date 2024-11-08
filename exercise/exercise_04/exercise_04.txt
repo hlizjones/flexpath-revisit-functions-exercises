@@ -1,0 +1,9 @@
+
+Exercise 4: Recursive Function to Flatten Nested Arrays
+
+Problem:
+
+Write a recursive function `flattenArray` that takes a deeply nested array 
+and returns a new, flat array containing all the elements. 
+
+Explain the importance of the base case in your recursive function.
