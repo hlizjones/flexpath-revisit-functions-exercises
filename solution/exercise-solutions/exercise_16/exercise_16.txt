@@ -1,4 +1,0 @@
-Exercise 16: Recursive Function to Generate Permutations
-Problem:
-
-Write a recursive function getPermutations that takes an array and returns all possible permutations of its elements. Explain how recursion is used in this context.
