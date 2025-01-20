@@ -1,0 +1,342 @@
+Functions: block of code that execute a specific tasks
+    anatomy: name, parameters, body, return
+        everything opt except for body
+
+    Declaration: function name (parameter) {//body}
+        to call: name(argument)
+        hoisted -> can use before declared
+
+    Expression: const name = function(parameter) {//body}
+        usually anonymous func assign to variable
+        to call: name(argument)
+        not hoisted -> cannot use before declared
+
+    Arrow: 
+        const converttoLiters = function (gallons) {
+            return gallons * 3.785
+        }
+
+        const converttoLiters = (gallons) => gallons * 3.785
+            if there is a return statement, arrow func can be compacted into one line
+        
+        not hoisted
+        can not be used as constructor
+        can't access arguments object (array-like object that holds all the args passed to func) -> can't iterate over arguments
+        do not have their own "this" binding -> should not use arrow functions as methods or for event handlers
+
+    Function Constructor: create new function from list are args and body provided as a string
+        not recommended -> shown bc it exists
+
+        const converttoLiters = new Function ('gallons', 'return gallons * 3.785;');
+            equivalent to:
+            const converttoLiters = (gallons) => gallons * 3.785
+        Use case: 
+            build functions dynamically
+        Cons: 
+            error prone
+            security issues
+
+IIFE (Immediately Invoked Function Expression)
+    function that automatically executes after its declaration
+
+    (function printDate() {
+        let date = new Date().toLocaleDateString();
+        console.log(date)
+    })()
+        wrap in paratheses and add () after to call immediately
+
+Parameters:
+    para are the placeholders and args are the data actually passed in
+    js doesn't check number of args entered compared to number of paras
+
+    primitives are passed by values into function
+        copy passed to func
+        does not change original value passed into function
+        
+    objects/arrays/functions are passed by reference
+        reference to object passed to func
+        changes original obj passed into function
+
+"arguments" Object:
+    array-like object called "arguments" contains values of the arg passed to a function
+
+    function calculcateSum() {
+        console.log(arguments); //{0: 11, 1: 22, 2:33}
+    }
+
+    calculcatrSum(11, 22, 33)
+
+    can use array methods on "arguments"
+
+    avoid "arguments" object -> outdated & error prone -> use rest parameters instead
+
+Rest parameters
+    allow functions to accept an indefinite number of args
+        function calculcateSum(...numbers) { //use spread operator
+            let sum = 0
+            numbers.forEach((nb) => (sum += nb));
+
+            return sum;
+        }
+
+        calculcateSum(1,1);
+        calculcateSum(1,2,3);
+        calculcateSum(1,2,3,4);
+
+    transforms parameters into an array
+    only one parameter can be a rest parameters & it must be the last parameter
+
+Callbacks
+    best for async programming
+
+
+Getters & Setters:
+    attached to property and called automatically when you call the property
+    getter and setters can encapsulate data
+    getter: 
+
+        class Passenger {
+        constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        }
+
+        // Getter
+        get fullName() {
+        return ${this. firstName} ${this.lastName}';
+        }
+        }
+
+        // No parentheses after getter
+        const john = new Passenger('John', 'Doe');
+        console.log(john.fullName); 
+
+        need get keyword and name
+        does not take parameters
+        called by using the name -> no () needed
+
+    setter:
+        class Passenger {
+        internalName ="";
+
+        constructor(name) {
+        // assign data to setter => modify private field
+        this.name = name;
+        }
+
+        set name(value) {
+        if (!value) {
+        throw new Error('name must have a value');
+        }
+
+        if (value.length < 1) {
+        throw new Error( 'name has few characters');
+        }
+
+        this.internalName = value;
+        }
+        }
+
+        need set keyword and name
+        one parameter exactly
+        called by using the name -> no () needed
+
+    can pair getter and setter by using same name for forEach -> will not encapsulte this way
+    
+Encapsulation:
+    # makes fields or methods private inside classed 
+
+        class Aircraft{
+        #speed = 0;
+        #altitude = 0; // private
+
+        constructor(speed, altitude) {
+        this.#speed = speed;
+        this.#altitude = altitude;
+        }
+        }
+
+        // private
+
+        const aircraft = new Aircraft(900, 20000);
+
+    speed and altitude are private; cannot be accessed outside class
+    getters and setters allow  user to use data privatized in class in specific, designed way
+        land() {
+        // Logic to change data in a safe way
+
+        get altitudeInFL() {
+        return this.#altitude / 100;
+        }
+        }
+
+        const aircraft = new Aircraft(900, 20000);
+
+Scope:
+    execution context where variables and expressions are visible (can be refeerenced) -> the accessibility of variables
+    1) Global
+        var defined outside a function/block
+        all functions and scirpts can access (inc other files in the same program)
+        avoid adding too many vars
+    
+    2) Functions/local
+            each function creates its own Scope
+            var declared insode a function are not accessible outside function
+            func can use all variables in its outer Scope
+
+            think of func scope as layers
+                var accessibility goes top to bottom -> bottom layers can access most and outer layers can access least
+    
+    3)Block
+        applies t var declared using let or constvar defined in a block {}
+            {}
+
+            {
+            const aircraftModel = 'A380';
+            } // this is a block
+
+            console. log(aircrattModel); // aircrattModel is not detined outside block
+
+            for (let i = 0; i < 10; 1u1){
+
+            console.log(1):
+
+            }// this is a block
+
+            console.log(1) ; // 1 is not defined outside block
+
+Closure:
+    Imagine you have an inner functions defined in an outer function
+
+    Closure is -> the inner function has access to the variables of the outer function EVEN after the outer function has finsied executing
+
+    function parent() {
+    // variable in outer function
+    let name = 'John Doe';
+
+    function child() {
+    console.log(name);
+    }
+
+    return child;
+
+    }
+
+    let child = parent() ; // parent function invoked and stored in variables
+        child function has not been invoked but stored as reference in child
+
+    child() //invokes child function which has store the varaible "name"
+
+    closure is the combo of a functions and lexical environment within which that function was declared
+        environment consisted of variables that were in scope at the time that the func was declared
+
+    closures do NOT have to do with how, when, or where the func is invoked but WHERE the func is declared
+
+"this"
+    in non-arrow funcs: usually reprents the object invoking tjhe func
+    in arrow func: referes to parent func's scope
+
+    Global:
+        at top level of script, "this" referes to global context (WIndow in html or Global in Node)
+        in strict mode it will be "undefined"
+
+    Constructor:
+        "this" is bound to the nre object being created w/ the constructor
+
+    Methods: 
+        "this" represents the obj invoking the method
+
+    Arrow:
+        do not have their own binding to "this" -> they inherit the value of "this" from the parent Scope aka from the outer function in which arrw function is defined
+
+            const aircraft = {
+            model: 'Airbus A330',
+            capacity: 350,
+
+            printModel: () => {
+            console.log(this.model);
+            };
+            };
+
+            aircraft.printModel(); // outputs undefined
+
+                arrow funcs do not bind to "this"
+                this inherits "this" from its parent conext/function with is the global scope bc aircraft is an object literal not a func
+
+            
+            class Aircraft {
+            constructor(model, capacity) {
+            this.model = model;
+            this.capacity = capacity;
+            }
+
+            printModel = () => {
+            console.log(this.model);
+            }
+            }
+
+            const b737 = new Aircraft('Boeing 737', 190);
+            b737.printModel(): // outputs Boeing 737
+
+            classes are syntactical sugar for constructor functions so bc class is technically a function, the arrow func inherits "this" from its parent scope/func which is the class Aircraft
+
+    bind(), call(), apply()
+        defined on the Function prototype -> provide dif way to call a func
+        can specify the value of "this" inide thr func
+
+        bind() create a new func based on an existing func and set "this" to a provided value
+        Function.prototype.bind(thiObj, arg1, arg2, etc...)
+
+            const printModel = function () {
+
+            console. log(this.model);
+            }
+
+            printMode l (); // undefined
+
+            const workingPrintModel = printModcl.bind({model: 'A380'});
+
+            workingPrintModcl();
+
+        call() can change the value of "this" when invoking a function
+            Function.prototype.call(thiObj, arg1, arg2, etc...)
+
+                const aircraft = { model: 'Airbus A330', totalSeats: 350, seatsOccupied: 100 };
+
+                const addPassengers - function (nbPassengers) {
+                const newCount = this.seatsOccupied + nbPassengers;
+                if (newCount <= this. totalSeats) { this.seatsOccupied = newCount;}
+                }
+
+                addPassengers(3): // scatsOccupicd: 100
+
+                addPassengers.call(aircraft, 3); // seatsOccupied: 103 -> aircraft is this and 3 is the arg
+
+            apply() is similar to call but can pass an array as an argument list
+                Function.prototype.apply(thiObj, arg1, arg2, etc...)
+
+                const aircraft = { model: 'Airbus A330', totalSeats: 350, seatsOccupied: 100 };
+
+                const addPassengers - function (nbPassengers) {
+                const newCount = this.seatsOccupied + nbPassengers;
+                if (newCount <= this. totalSeats) { this.seatsOccupied = newCount;}
+                }
+
+                addPassengers(3): // scatsOccupicd: 100
+
+                addPassengers.apply(aircraft, [3]); // seatsOccupied: 103 -> aircraft is this and 3 is the arg
+
+        bind creates a new func, call and apply directly invoke a func
+            call or apply is recommended
+
+Async  
+    Long running code:
+        camera/micro
+        selecting files
+        http calls
+        time delays
+
+    
+
+
+    
